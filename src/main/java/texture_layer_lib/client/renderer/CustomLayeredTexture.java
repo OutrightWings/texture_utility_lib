@@ -1,4 +1,4 @@
-package sekelsta.horse_colors.client.renderer;
+package texture_layer_lib.client.renderer;
 
 import net.minecraft.client.renderer.texture.*;
 import com.google.common.collect.Lists;

@@ -1,4 +1,4 @@
-package sekelsta.horse_colors.client.renderer;
+package texture_layer_lib.client.renderer;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -9,7 +9,7 @@ import java.util.Objects;
 import net.minecraft.client.renderer.texture.*;
 import net.minecraft.server.packs.resources.ResourceManager;
 
-import sekelsta.horse_colors.util.Color;
+import texture_layer_lib.util.Color;
 
 import com.mojang.blaze3d.platform.NativeImage;
 

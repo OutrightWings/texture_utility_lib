@@ -1,4 +1,4 @@
-package sekelsta.horse_colors.util;
+package texture_layer_lib.util;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package sekelsta.horse_colors.client.renderer;
+package texture_layer_lib.client.renderer;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -11,7 +11,7 @@ import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.resources.ResourceLocation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import sekelsta.horse_colors.util.Color;
+import texture_layer_lib.util.Color;
 
 import com.mojang.blaze3d.platform.NativeImage;
 
