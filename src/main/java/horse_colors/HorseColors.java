@@ -24,42 +24,18 @@ public class HorseColors
 {
     public static final String MODID = "horse_colors";
 
-    public static HorseColors instance;
-
     public static Logger logger = LogManager.getLogger(MODID);
 
     public HorseColors()
     {
-        instance = this;
 
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
-        MinecraftForge.EVENT_BUS.addListener(ContainerEventHandler::editContainer);
-        MinecraftForge.EVENT_BUS.register(HorseReplacer.class);
-
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, HorseConfig.spec);
-        MinecraftForge.EVENT_BUS.addListener(BreedManager::addReloadListener);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(ModItems::addToCreativeTab);
-
-        Spawns.registerBiomeModifiers();
-
-        registerDeferredRegistries(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
     private void clientSetup(final FMLClientSetupEvent event)
     {
-        MinecraftForge.EVENT_BUS.addListener(HorseGui::replaceGui);
+
     }
 
     public void commonSetup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(ModEntities::registerSpawnPlacements);
-        event.enqueueWork(ModItems::registerDispenseBehaviour);
-        event.enqueueWork(ModItems::registerPotionRecipes);
-    }
-
-    public static void registerDeferredRegistries(IEventBus modBus) {
-        ModEntities.ENTITY_DEFERRED.register(modBus);
-        ModItems.ITEM_DEFERRED.register(modBus);
-        Spawns.BIOME_MODIFIER_DEFERRED.register(modBus);
     }
 }
